@@ -1,33 +1,67 @@
 <div class="home-page">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <div class="user-list">
-                    <form action="/action_page.php">
-                        <div class="form-group">
-                          <label for="email">Email:</label>
-                          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                        </div>
-                        <div class="form-group">
-                          <label for="pwd">Password:</label>
-                          <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
-                        </div>
-                        <div class="form-group">
-                            <label for="dob">DOB:</label>
-                            <input type="dob" class="form-control" id="dob" placeholder="Date Of Birth" name="dob">
-                        </div>
-                        <div class="form-group">
-                            <label for="gender">Gender:</label>
-                            <input type="gender" class="form-control" id="gender" placeholder="Gender" name="gender">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone:</label>
-                            <input type="phone" class="form-control" id="phone" placeholder="phone" name="phone">
-                        </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+       <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+             <div class="user-list">
+                <form [formGroup]="createFormGroup"
+                class="myform"
+                (ngSubmit)="onSubmit();">
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input type="text" class="form-control" 
+                            placeholder="Enter Title"
+                            formControlName="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="first">First Name:</label>
+                        <input type="text" class="form-control" 
+                            placeholder="Enter First Name"
+                            formControlName="fname">
+                    </div>
+                    <div class="form-group">
+                        <label for="last">Last Name:</label>
+                        <input type="text" class="form-control" 
+                            placeholder="Enter Last Name"
+                            formControlName="lname">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="text" class="form-control" id="email" 
+                            placeholder="Enter email"
+                            formControlName="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="user">User Name:</label>
+                        <input type="text" class="form-control" 
+                            placeholder="Enter User Name"
+                            formControlName="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" 
+                            id="pwd" placeholder="Enter password"
+                            formControlName="password"
+                            autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">DOB:</label>
+                        <input type="date" 
+                            class="form-control" 
+                            id="dob" 
+                            placeholder="Date Of Birth" name="dob"
+                            formControlName="dob">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="text" 
+                            class="form-control" 
+                            id="phone" placeholder="phone" name="phone"
+                            formControlName="phone">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+             </div>
+          </div>
+       </div>
     </div>
-</div>
+ </div>
