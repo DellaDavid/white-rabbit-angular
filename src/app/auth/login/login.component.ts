@@ -41,7 +41,6 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    // this.isSubmitClicked = true;
     this._authService.getUsers().subscribe(res => {
       if(res["username"] === this.loginFormGroup.controls.name.value) {
         this.loginFormGroup.controls.name.setErrors({'wrongNamePassword' : null});

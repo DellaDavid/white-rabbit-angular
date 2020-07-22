@@ -1,3 +1,4 @@
+import { CreateUserComponent } from './create-user/create-user.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -8,6 +9,7 @@ const routes: Routes = [
   { path: '', component: UserParentComponent, children:
     [
       { path: 'home', component: HomeComponent },
+      { path: 'create-user', component: CreateUserComponent },
       { path: '', redirectTo: '/user/home', pathMatch: 'full' },
     ]
   },
